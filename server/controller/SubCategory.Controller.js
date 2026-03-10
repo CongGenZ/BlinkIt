@@ -4,7 +4,7 @@ import SubCategoryModel from "../models/subCategory.model.js";
 
 
 // AddSubCategoryController
- export const AddSubCategoryController  = async ()=>{
+ export const AddSubCategoryController  = async (request,response)=>{
     try {
         const {name,image,category} = request.body
 
@@ -40,23 +40,29 @@ import SubCategoryModel from "../models/subCategory.model.js";
  }
 
 // getSubCategoryController
- export const getSubCategoryController = async(request,response)=>{
-           try {
-             const data = (await SubCategoryModel.find()).sort({createAt : -1}).populate('category')
-             return response.json({
-                message:"Sub Category data",
-                data:data,
-                error:false,
-                success:true
-             })
-           } catch (error) {
-               return response.status(500).json({
-                message:error.message || error,
-                error : true,
-                success:false
-               })
-           }
- }
+ export const getSubCategoryController = async (request, response) => {
+  try {
+
+    const data = await SubCategoryModel
+      .find()
+      .sort({ createdAt: -1 })
+      .populate("category");
+
+    return response.json({
+      message: "Sub Category data",
+      data: data,
+      error: false,
+      success: true
+    });
+
+  } catch (error) {
+    return response.status(500).json({
+      message: error.message || error,
+      error: true,
+      success: false
+    });
+  }
+};
 
 //  updateSubCategoryController
 

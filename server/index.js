@@ -63,12 +63,12 @@ app.use('/api/category',categoryRouter)
 // upload image
 app.use('/api/file',uploadRouter)
 // subcategory
-app.use('/api/subcategpry',subCategoryRouter)
+app.use('/api/subcategory',subCategoryRouter)
  app.use((err,req,res,next)=>{
     console.log("MULTER ERROR:", err);
 
     //File quá lớn
-    if(err.code = "LIMIT_FILE_SIZE"){
+    if(err.code === "LIMIT_FILE_SIZE"){
         return res.status(400).json({
             message:"Image too large (max 5MB)",
             error:true,

@@ -49,7 +49,7 @@ const color = "#ffffff";
                 if(responseData.success){
                 toast.success(responseData.message)
                 close()
-                fetchData()
+                fetchData
             }
               } catch (error) {
                 AxiosToastError(error)

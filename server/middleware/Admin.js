@@ -1,4 +1,4 @@
-import UserModel from "../models/user.models";
+import UserModel from "../models/user.models.js";
  export const admin  =  async (request,response, next)=>{
     try {
        const  userId = request.userId

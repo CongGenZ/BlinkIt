@@ -56,11 +56,12 @@ const productSchema = new mongoose.Schema({
     timestamps : true
 }
 )
-//create a text index
+//create a text index để search
 productSchema.index({
     name  : "text",
     description : 'text'
 },{
+    //  độ ưu tiên search
     name : 10,
     description : 5
 })

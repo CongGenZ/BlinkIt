@@ -10,6 +10,7 @@ import userRouter from './route/user.route.js'
 import { categoryRouter } from './route/category.route.js'
 import uploadRouter from './route/upload.route.js'
 import { subCategoryRouter } from './route/subCategory.route.js'
+import { productRouter } from './route/product.route.js'
 // import userRouter from './route/user.route.js'
 // import categoryRouter from './route/category.route.js'
 // import uploadRouter from './route/upload.router.js'
@@ -64,6 +65,7 @@ app.use('/api/category',categoryRouter)
 app.use('/api/file',uploadRouter)
 // subcategory
 app.use('/api/subcategory',subCategoryRouter)
+app.use("/api/product",productRouter)
  app.use((err,req,res,next)=>{
     console.log("MULTER ERROR:", err);
 

@@ -110,5 +110,39 @@ getProduct : {
         url : '/api/product/search-product',
         method : 'post'
     },
+
+    // cart
+    addTocart : {
+        url : "/api/cart/create",
+        method : 'post'
+    },
+    getCartItem : {
+        url : '/api/cart/get',
+        method : 'get'
+    },
+    updateCartItemQty : {
+        url : '/api/cart/update-qty',
+        method : 'put'
+    },
+    deleteCartItem : {
+        url : '/api/cart/delete-cart-item',
+        method : 'delete'
+    },
+    createAddress : {
+        url : '/api/address/create',
+        method : 'post'
+    },
+    getAddress : {
+        url : '/api/address/get',
+        method : 'get'
+    },
+    updateAddress : {
+        url : '/api/address/update',
+        method : 'put'
+    },
+    disableAddress : {
+        url : '/api/address/disable',
+        method : 'delete'
+    },
 }
 export default SummaryApi

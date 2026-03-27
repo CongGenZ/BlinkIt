@@ -18,6 +18,8 @@ import UploadProduct from "../pages/UploadProduct";
 import Product from "../pages/Product";
 import ProductAdmin from "../pages/ProductAdmin";
 import AdminPermision from "../layout/AdminPermision";
+import ProductDisplayPage from "../pages/ProductDisplayPage";
+import ProductListPage from "../components/ProductListPage";
 
 const router = createBrowserRouter(
     [
@@ -92,6 +94,19 @@ const router = createBrowserRouter(
                     }
                 ]
               },
+              {
+                path : ":category",
+                children : [
+                    {
+                        path : ":subCategory",
+                        element : <ProductListPage/>
+                    }
+                ]
+              },
+              {
+                path : "product/:product",
+                element : <ProductDisplayPage/>
+            },
             //  {
             //     path : "user",
             //     element : <UserMenuMobile/>

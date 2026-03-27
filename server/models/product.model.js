@@ -62,8 +62,10 @@ productSchema.index({
     description : 'text'
 },{
     //  độ ưu tiên search
-    name : 10,
-    description : 5
+     weights : {
+        name : 10,
+        description : 5
+    }
 })
 const ProductModel = mongoose.model('product',productSchema)
 

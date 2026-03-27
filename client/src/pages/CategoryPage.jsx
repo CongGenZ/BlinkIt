@@ -58,7 +58,9 @@ const CategoryPage = () => {
         try {
             const response = await Axios({
                 ...SummaryApi.deleteCategory,
-                data : deleteCategory
+                data : {
+                           _id : deleteCategory._id
+                  }
             })
 
             const { data : responseData } = response

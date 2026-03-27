@@ -10,7 +10,7 @@ import AddFieldComponent from '../components/AddFieldComponent';
 import Axios from '../utils/Axios';
 import SummaryApi from '../common/SummaryApi';
 import AxiosToastError from '../utils/AxiosToastError';
-import successAlert from '../utils/successAlert.jsx';
+import successAlert from '../utils/successAlert.js';
 // eslint-disable-next-line no-unused-vars
 import { useEffect } from 'react';
 const UploadProduct = () => {

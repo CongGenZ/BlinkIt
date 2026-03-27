@@ -5,6 +5,10 @@ const addressSchema = new mongoose.Schema({
         type : String,
         default : ""
     },
+    ward : {
+        type : String,
+        default : ""
+    },
     city : {
         type : String,
         default : ""

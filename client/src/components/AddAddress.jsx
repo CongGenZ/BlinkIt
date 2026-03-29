@@ -32,6 +32,7 @@ const AddAddress = ({close}) => {
                 const res = await fetch("https://provinces.open-api.vn/api/p/")
                 const json = await res.json()
                 if (!ignore) setProvinces(Array.isArray(json) ? json : [])
+            // eslint-disable-next-line no-unused-vars
             } catch (e) {
                 if (!ignore) setProvinces([])
             } finally {
@@ -60,6 +61,7 @@ const AddAddress = ({close}) => {
             const res = await fetch(`https://provinces.open-api.vn/api/p/${code}?depth=2`)
             const json = await res.json()
             setDistricts(Array.isArray(json?.districts) ? json.districts : [])
+        // eslint-disable-next-line no-unused-vars
         } catch (e) {
             setDistricts([])
         } finally {
@@ -80,6 +82,7 @@ const AddAddress = ({close}) => {
             const res = await fetch(`https://provinces.open-api.vn/api/d/${code}?depth=2`)
             const json = await res.json()
             setWards(Array.isArray(json?.wards) ? json.wards : [])
+        // eslint-disable-next-line no-unused-vars
         } catch (e) {
             setWards([])
         } finally {

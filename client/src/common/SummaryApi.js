@@ -144,5 +144,22 @@ getProduct : {
         url : '/api/address/disable',
         method : 'delete'
     },
+    getOrderItems : {
+        url : '/api/order/get',
+        method : 'get'
+    },
+    createOrder : {
+        url : '/api/order/create',
+        method : 'post'
+    },
+
+    createPayment : {
+        url : '/api/payments',
+        method : 'post'
+    },
+    getPaymentById : {
+        url : '/api/payments',
+        method : 'get'
+    },
 }
 export default SummaryApi

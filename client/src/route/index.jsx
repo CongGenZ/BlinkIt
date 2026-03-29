@@ -20,6 +20,9 @@ import ProductAdmin from "../pages/ProductAdmin";
 import AdminPermision from "../layout/AdminPermision";
 import ProductDisplayPage from "../pages/ProductDisplayPage";
 import ProductListPage from "../components/ProductListPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import Success from "../pages/Success";
+import Cancel from "../pages/Cancel";
 
 const router = createBrowserRouter(
     [
@@ -107,6 +110,18 @@ const router = createBrowserRouter(
                 path : "product/:product",
                 element : <ProductDisplayPage/>
             },
+            {
+              path : "checkout",
+              element : <CheckoutPage/>
+            },
+            {
+              path : "success",
+              element : <Success/>
+            },
+            {
+              path : "cancel",
+              element : <Cancel/>
+            }
             //  {
             //     path : "user",
             //     element : <UserMenuMobile/>
